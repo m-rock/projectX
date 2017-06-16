@@ -1,0 +1,9 @@
+[0m[[0minfo[0m] [0m[32mSparkServicesSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mThe service[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to insert data in the couchbase[0m[0m
+[0m[[0minfo[0m] [0m[31m- should to be able to retrieve data via N1Ql *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  false did not equal true (SparkServiceSpec.scala:25)[0m[0m
+[0m[[0minfo[0m] [0m[31m- should be able to retrieve data via View query *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  false did not equal true (SparkServiceSpec.scala:30)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to retrieve data via KV operation[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to update data via KV operation[0m[0m

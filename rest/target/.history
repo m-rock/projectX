@@ -1,0 +1,22 @@
+quit
+exit
+build
+refresh
+reload
+compile
+reload
+compile
+clean
+compile
+reload
+clean
+compile
+compile -Ylog-classpath
+exit
+reload
+compile 
+test
+exit
+test
+cc
+exit
