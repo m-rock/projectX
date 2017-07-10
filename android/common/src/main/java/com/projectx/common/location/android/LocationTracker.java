@@ -1,4 +1,4 @@
-package com.projectx.common.location.com.projectx.common.location.android;
+package com.projectx.common.location.android;
 
 import android.Manifest;
 import android.content.Context;
