@@ -8,8 +8,8 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-import com.github.kayvannj.permission_utils.Func2;
-import com.github.kayvannj.permission_utils.PermissionUtil;
+import com.projectx.common.permission.android.PermissionUtil;
+import com.projectx.common.permission.android.Func2;
 
 public class LocationTracker {
 
