@@ -1,4 +1,7 @@
 /target
 .project
 .classpath
+.cache*
+.settings
+.idea
 /bin/
