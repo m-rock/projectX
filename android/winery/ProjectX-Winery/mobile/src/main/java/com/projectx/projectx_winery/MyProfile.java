@@ -10,7 +10,11 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.projectx.common.location.android.LocationTracker;
+
 public class MyProfile extends AppCompatActivity {
+
+    private LocationTracker locationTracker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +38,26 @@ public class MyProfile extends AppCompatActivity {
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+        locationTracker = new LocationTracker("winery")
+                .setInterval(50000)
+                .setGps(true)
+    //            .setNetwork(false)
+                .start(getBaseContext(), this);
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_my_profile, menu);
         return true;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        locationTracker.onRequestPermission(requestCode, permissions, grantResults);
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
     @Override
@@ -53,6 +73,12 @@ public class MyProfile extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        locationTracker.stopLocationService(this);
     }
 
     /**
